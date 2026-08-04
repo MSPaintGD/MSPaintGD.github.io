@@ -14,6 +14,7 @@
         <button onclick="showSection('about')">About Me</button>
         <button onclick="showSection('images')">Art By</button>
         <button onclick="showSection('socials')">My Socials</button>
+        <button onclick="showSection('hallfame')">Hall of Fame</button>
     </div>
 
     <section id="homeSection">
@@ -45,7 +46,7 @@
         <h2>Games:</h2>
         <div class="content-box">
             <div class="game-item">
-                <p class="game-name">#1: <a href="https://justanoval.itch.io/funny-bones" target="_blank">funny bones</a>.</p>
+                <p class="game-name">#1: <a2 href="https://justanoval.itch.io/funny-bones" target="_blank">funny bones</a2>.</p>
                 <img id="gameImage" src="" alt="Funny Bones" style="max-width: 200px; height: auto; display: block; margin: 0 auto;">
             </div>
         </div>
@@ -67,7 +68,11 @@
         <p>My Youtube: <a href="https://www.youtube.com/@MSPaintGD" target="_blank">MSPaintGD</a>.</p>
         <p>My GitHub: <a href="https://github.com/MSPaintGD" target="_blank">GitHub</a>.</p>
     </section>
-
+    <section id="hallFame" style="display: none; position: relative; z-index: 1; text-align: center; padding: 20px;">
+        <h1>Hall of Fame</h1>
+        <h3>ULTRAKILL    |   Justan Oval   |      Linux  |   Blahaj  | Plane Models  |   Terry A. Davis  |   Kerbal Space Program    |   Geometry Dash   |   shrimp  |<br><br>   My Friends  |   War Thunder |   HTML    |   Nicopatty   |   Sushi   |   DBZ, DBS    |   Subnautica 1+2  |   Below Zero  |   Sharks  |  ADOFAI  |   Mangoes |<br><br>   My Computer |   Youtube |   Books   |   Project Hail Mary   |   The Backrooms   |   Kinetiq.studios |   Captain Clark   |   Sam Tabor   |   family  |</h3><br><br><br><br>
+        <h2>And Much, Much More!</h2>
+    </section>
     <script>
         const backgroundImageUrl = 'https://yt3.googleusercontent.com/gWaFl8fsnECgZacbv7LetNEnX98CFS8Chd-T7FYnFPj2bBnLqWz29CeIoQ83PHZ9LK6nyZUXtg=s900-c-k-c0x00ffffff-no-rj';
         const artImageUrl = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE2AmL6_FtRRCLKDsqXqEKApvXi0xPfIJXFDhBZTsqRQ&s=10';
@@ -83,7 +88,7 @@
             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRquu-6dvpGFxvB1vDUgx1x9ll_RxqKmq6-nCEzmUmKaw&s=10'
         ];
 
-        const count = 30;
+        const count = 50;
         const container = document.getElementById('raindrops');
 
         for (let i = 0; i < count; i++) {
@@ -104,6 +109,7 @@
             document.getElementById('aboutSection').style.display = section === 'about' ? 'block' : 'none';
             document.getElementById('artBy').style.display = section === 'images' ? 'block' : 'none';
             document.getElementById('mySocials').style.display = section === 'socials' ? 'block' : 'none';
+            document.getElementById("hallFame").style.display = section === 'hallfame' ? 'block' :'none';
         }
     </script>
 </body>
