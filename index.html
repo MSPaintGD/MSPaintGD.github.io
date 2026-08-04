@@ -9,7 +9,6 @@
 </head>
 <body>
     <div id="raindrops"></div>
-
     <div class="topbar">
         <button onclick="showSection('home')">Best of</button>
         <button onclick="showSection('about')">About Me</button>
@@ -19,31 +18,35 @@
 
     <section id="homeSection">
         <h1>The Best of Justan Oval</h1>
-
+        <h2>Songs:</h2>
         <div class="content-box">
             <div class="song-item">
                 <p class="song-title">#1: Sharks with Lasers!</p>
                 <iframe class="bandcamp-player" style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=1660347737/size=small/bgcol=333333/linkcol=0f91ff/transparent=true/" seamless><a href="https://justanoval.bandcamp.com/track/sharks-with-lasers">SHARKS WITH LASERS! by justan oval</a></iframe>
             </div>
-
             <div class="song-item">
                 <p class="song-title">#2: pip the shrimp</p>
                 <iframe class="bandcamp-player" style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=438622879/size=small/bgcol=333333/linkcol=0f91ff/transparent=true/" seamless><a href="https://justanoval.bandcamp.com/track/pip-the-shrimp">pip the shrimp by justan oval</a></iframe>
             </div>
-
             <div class="song-item">
                 <p class="song-title">#3: mr. shy frog</p>
                 <iframe class="bandcamp-player" style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=3354235482/size=small/bgcol=333333/linkcol=0f91ff/transparent=true/" seamless><a href="https://justanoval.bandcamp.com/track/mr-shy-frog">mr. shy frog by justan oval</a></iframe>
             </div>
-
             <div class="song-item">
                 <p class="song-title">#4: it's a seal!</p>
                 <iframe class="bandcamp-player" style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=1152069093/size=small/bgcol=333333/linkcol=0f91ff/transparent=true/" seamless><a href="https://justanoval.bandcamp.com/track/its-a-seal">it's a seal! by justan oval</a></iframe>
             </div>
-
             <div class="song-item">
                 <p class="song-title">#5: Frenzied</p>
                 <iframe class="bandcamp-player" style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=2332661659/size=small/bgcol=333333/linkcol=0f91ff/transparent=true/" seamless><a href="https://justanoval.bandcamp.com/track/frenzied">Frenzied by justan oval</a></iframe>
+            </div>
+        </div>
+        <br>
+        <h2>Games:</h2>
+        <div class="content-box">
+            <div class="game-item">
+                <p class="game-name">#1: funny bones</p>
+                <img id="gameImage" src="" alt="Funny Bones" style="max-width: 200px; height: auto; display: block; margin: 0 auto;">
             </div>
         </div>
         <p><br><br>Thank you for reading my list!</p>
@@ -58,15 +61,17 @@
         <h1>Best Art by Justan Oval</h1>
         <img id="artImage" src="" alt="Justan Oval Art" style="max-width: 200px; height: auto; display: block; margin: 0 auto;">
     </section>
-    <section id="mySocials" style="display: none; position: relative; z-index 1; text-align: center; padding: 20px;">
+
+    <section id="mySocials" style="display: none; position: relative; z-index: 1; text-align: center; padding: 20px;">
         <h1>MSPaintGD (Me)</h1>
-        <p>My Youtube: <a href "https://www.youtube.com/@MSPaintGD" target="_blank">MSPaintGD</a>.</p>
-        <p>My GitHub: <a href "https://github.com/MSPaintGD" taget="_blank">GitHub</a>.</p>
-        
+        <p>My Youtube: <a href="https://www.youtube.com/@MSPaintGD" target="_blank">MSPaintGD</a>.</p>
+        <p>My GitHub: <a href="https://github.com/MSPaintGD" target="_blank">GitHub</a>.</p>
     </section>
+
     <script>
         const backgroundImageUrl = 'https://yt3.googleusercontent.com/gWaFl8fsnECgZacbv7LetNEnX98CFS8Chd-T7FYnFPj2bBnLqWz29CeIoQ83PHZ9LK6nyZUXtg=s900-c-k-c0x00ffffff-no-rj';
         const artImageUrl = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE2AmL6_FtRRCLKDsqXqEKApvXi0xPfIJXFDhBZTsqRQ&s=10';
+        const gameImageUrl = 'https://img.itch.zone/aW1nLzI1MTM1MjgxLnBuZw==/347x500/PNgP42.png';
         const count = 20;
         const container = document.getElementById('raindrops');
 
@@ -79,8 +84,8 @@
             img.style.animationDelay = (Math.random() * 10) + 's';
             container.appendChild(img);
         }
-
         document.getElementById('artImage').src = artImageUrl;
+        document.getElementById('gameImage').src = gameImageUrl;
 
         function showSection(section) {
             document.getElementById('homeSection').style.display = section === 'home' ? 'block' : 'none';
