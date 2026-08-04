@@ -45,7 +45,7 @@
         <h2>Games:</h2>
         <div class="content-box">
             <div class="game-item">
-                <p class="game-name">#1: <a href="https://justanoval.itch.io/funny-bones" target="_blank">funny bones</a>.</p>
+                <p class="game-name">#1: <a2 href="https://justanoval.itch.io/funny-bones" target="_blank">funny bones</a2>.</p>
                 <img id="gameImage" src="" alt="Funny Bones" style="max-width: 200px; height: auto; display: block; margin: 0 auto;">
             </div>
         </div>
@@ -72,12 +72,24 @@
         const backgroundImageUrl = 'https://yt3.googleusercontent.com/gWaFl8fsnECgZacbv7LetNEnX98CFS8Chd-T7FYnFPj2bBnLqWz29CeIoQ83PHZ9LK6nyZUXtg=s900-c-k-c0x00ffffff-no-rj';
         const artImageUrl = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE2AmL6_FtRRCLKDsqXqEKApvXi0xPfIJXFDhBZTsqRQ&s=10';
         const gameImageUrl = 'https://img.itch.zone/aW1nLzI1MTM1MjgxLnBuZw==/347x500/PNgP42.png';
-        const count = 20;
+        const raindropImageUrls = [
+            backgroundImageUrl,
+            backgroundImageUrl,
+            backgroundImageUrl,
+            backgroundImageUrl,
+            backgroundImageUrl,
+            backgroundImageUrl,
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAIHIvH8vBsgBnJ57k4VZCI6xArlVKzxoZP2DsBFg_Dw&s',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRquu-6dvpGFxvB1vDUgx1x9ll_RxqKmq6-nCEzmUmKaw&s=10'
+        ];
+
+        const count = 50;
         const container = document.getElementById('raindrops');
 
         for (let i = 0; i < count; i++) {
             const img = document.createElement('img');
-            img.src = backgroundImageUrl;
+            const randomIndex = Math.floor(Math.random() * raindropImageUrls.length);
+            img.src = raindropImageUrls[randomIndex];
             img.className = 'raindrop';
             img.style.left = Math.random() * 100 + 'vw';
             img.style.animationDuration = (4 + Math.random() * 6) + 's';
