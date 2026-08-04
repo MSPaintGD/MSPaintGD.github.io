@@ -1,0 +1,91 @@
+h1 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+body {
+  background-color: black;
+  overflow: hidden;
+  text-align: center;
+  font-family: 'VT323', monospace;
+  color: white;
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
+}
+
+p {
+  color: white;
+}
+
+a {
+  color: lightgreen;
+}
+
+.topbar {
+  position: relative;
+  z-index: 2;
+  padding: 0px 0 0px;
+  border-bottom: 2px solid white;
+}
+
+.topbar button {
+  background: none;
+  border: none;
+  color: white;
+  font: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 18px;
+  padding: 0;
+}
+
+.topbar button:hover {
+  text-decoration: underline;
+}
+
+.content-box {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.song-item {
+  margin: 12px 0;
+}
+
+.song-title {
+  font-size: 28px;
+  margin: 0 0 4px;
+}
+
+.bandcamp-player {
+  display: block;
+}
+
+#raindrops {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.raindrop {
+  position: fixed;
+  top: -80px;
+  height: auto;
+  width: 3vw;
+  object-fit: contain;
+  opacity: 0.6;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(110vh);
+  }
+}
