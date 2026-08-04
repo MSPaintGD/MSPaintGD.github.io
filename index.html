@@ -10,14 +10,26 @@
 <body>
     <div id="raindrops"></div>
     <div class="topbar">
-        <button onclick="showSection('home')">Best of</button>
         <button onclick="showSection('about')">About Me</button>
-        <button onclick="showSection('images')">Art By</button>
+        <button onclick="showSection('aboutoval')">About Oval</button>
+        <button onclick="showSection('home')">Best Songs</button>
+        <button onclick="showSection('images')">Best Art</button>
         <button onclick="showSection('socials')">My Socials</button>
         <button onclick="showSection('hallfame')">Hall of Fame</button>
     </div>
 
-    <section id="homeSection">
+    <section id="aboutSection" style="position: relative; z-index: 1; text-align: center; padding: 20px;">
+        <h1>About Me</h1>
+        <p>Hello! My name is Esty, and I made this small little page because I like <a href="https://www.youtube.com/@JustanOval" target="_blank">Justan Oval</a>. He's my inspiration to making a lot of things, like this page (Obviously), making some songs (To no avail), and a little bit more. <br><br> I made this page with my own hands, learning to code a little bit of HTML. This is where I got the song links from <a href="https://justanoval.bandcamp.com/" target="_blank">Bandcamp</a>. <br><br>I like to eat sushi, I make Youtube videos and I like ULTRAKILL.</p>
+        <h3>I will be constantly editing this page from now on! This was orginally meant to be a page about Justan Oval, but instead its now my github page!</h3>
+    </section>
+
+    <section id="aboutOvalSection" style="display: none; position: relative; z-index: 1; text-align: center; padding: 20px;">
+        <h1>About Oval</h1>
+        <p>Justan Oval was born in 2002. He has about 500,000 subscribers as of Wednesday, the 5th of August. He has made a fan base of many people (Including me!) and has also made a small community. He is most famous for his songs, also known as micro songs, which he makes different "volumes" of them. </p>
+    </section>
+
+    <section id="homeSection" style="display: none;">
         <h1>The Best of Justan Oval</h1>
         <h2>Songs:</h2>
         <div class="content-box">
@@ -51,11 +63,6 @@
             </div>
         </div>
         <p><br><br>Thank you for reading my list!</p>
-    </section>
-
-    <section id="aboutSection" style="display: none; position: relative; z-index: 1; text-align: center; padding: 20px;">
-        <h1>About Me</h1>
-        <p>Hello! My name is Esty, and I made this small little page because I like <a href="https://www.youtube.com/@JustanOval" target="_blank">Justan Oval</a>. He's my inspiration to making a lot of things, like this page (Obviously), making some songs (To no avail), and a little bit more. <br><br> I made this page with my own hands, learning to code a little bit of HTML. This is where I got the song links from <a href="https://justanoval.bandcamp.com/" target="_blank">Bandcamp</a>. <br>I like to eat sushi, I make Youtube videos and I like ULTRAKILL.</p>
     </section>
 
     <section id="artBy" style="display: none; position: relative; z-index: 1; text-align: center; padding: 20px;">
@@ -105,11 +112,12 @@
         document.getElementById('gameImage').src = gameImageUrl;
 
         function showSection(section) {
-            document.getElementById('homeSection').style.display = section === 'home' ? 'block' : 'none';
             document.getElementById('aboutSection').style.display = section === 'about' ? 'block' : 'none';
+            document.getElementById('aboutOvalSection').style.display = section === 'aboutoval' ? 'block' : 'none';
+            document.getElementById('homeSection').style.display = section === 'home' ? 'block' : 'none';
             document.getElementById('artBy').style.display = section === 'images' ? 'block' : 'none';
             document.getElementById('mySocials').style.display = section === 'socials' ? 'block' : 'none';
-            document.getElementById("hallFame").style.display = section === 'hallfame' ? 'block' :'none';
+            document.getElementById('hallFame').style.display = section === 'hallfame' ? 'block' : 'none';
         }
     </script>
 </body>
